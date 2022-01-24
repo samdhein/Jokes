@@ -14,7 +14,7 @@ console.log("server.js: before routes")
 require("./routes/joke.routes")(app);
 
 // listen to port 
-app.listen( 8000, ()=> console.log('listening on port: 8000'))
+app.listen( 8000, ()=> console.log('listening on port: 8000') )
 
 
 // conclusion: 

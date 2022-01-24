@@ -4,8 +4,7 @@ module.exports.index = (req, res) => {
     res.json("Hello")
 }
 
-// find all
-
+// find all jokes
 module.exports.allJokes = (req, res) => {
     Joke.find()
         .then(allJokes=>{
@@ -16,7 +15,6 @@ module.exports.allJokes = (req, res) => {
 }
 
 // create joke
-
 module.exports.createJoke = (req, res) => {
     Joke.create(req.body)
     .then(newJoke => res.json({result: newJoke}))
@@ -24,7 +22,6 @@ module.exports.createJoke = (req, res) => {
 }
 
 // find one joke
-
 module.exports.oneJoke = (req, res) => {
     Joke.findOne({_id: req.params.id})
     .then(joke => res.json({joke: joke}))
@@ -32,7 +29,6 @@ module.exports.oneJoke = (req, res) => {
 }
 
 // update joke
-
 module.exports.updateJoke = (req, res) => {
     Joke.findOneAndUpdate(
         {_id: req.params.id},  // need id
@@ -44,7 +40,6 @@ module.exports.updateJoke = (req, res) => {
 }
 
 // delete joke
-
 module.exports.deleteJoke = (req, res) => {
     Joke.deleteOne({ _id: req.params.id })
     .then(result => res.json({result: result}))
