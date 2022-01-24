@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-// boilerplate mongoose config from platform. update name_db. convention: lowercase, undesrcore, hyphen ok
+// boilerplate mongoose config from platform. update name_db. convention: lowercase, undesrcore, hyphen is ok
 
 mongoose.connect('mongodb://localhost/joke_db', {
     useNewUrlParser: true,
